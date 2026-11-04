@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Button } from '../components/Button';
+
+<Meta title="Introduction" />
+
+<div style={{ padding: '8px 0 24px' }}>
+  <p style={{ margin: 0, color: '#3442BE', fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase', fontSize: 12 }}>
+    Design system
+  </p>
+  <h1 style={{ margin: '4px 0 8px', fontSize: 40, letterSpacing: '-0.02em' }}>Docket UI</h1>
+  <p style={{ margin: 0, fontSize: 18, color: '#4B5468', maxWidth: 640 }}>
+    The component library for Docket, a fictional legal-operations product. Built so that designers,
+    developers and AI agents all build from the same parts.
+  </p>
+</div>
+
+## What's inside
+
+- **Tokens:** primitives, semantic tokens (light and dark) and component tokens, in JSON. One build step turns them into CSS variables.
+- **Components:** React and TypeScript, styled only with tokens. Each one has tests for behavior and accessibility.
+- **Patterns:** real screens assembled only from the library, like the matter intake form.
+
+## Principles
+
+1. **Tokens, never raw values.** A brand or theme change happens in one JSON file.
+2. **Accessibility is a build gate.** Every text and control color pair is checked against WCAG AA in both themes, components are tested with axe, and stories fail on accessibility violations.
+3. **Native first.** Use the platform (`<button>`, `<select>`, `<input type="checkbox">`) and add only what it is missing, so keyboard and screen reader support come for free.
+4. **One primary action per view.**
+
+## Try it
+
+Use the **Theme** toolbar button to switch light and dark, and the viewport button to check phone and tablet sizes.
+
+<div style={{ display: 'flex', gap: 12, margin: '16px 0' }}>
+  <Button>Create matter</Button>
+  <Button variant="secondary">Cancel</Button>
+</div>
+
+Source: [github.com/dnewmann/docket-ui](https://github.com/dnewmann/docket-ui)

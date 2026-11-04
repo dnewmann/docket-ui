@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { PrimitiveRamps, SemanticTable } from './TokenSwatches';
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Docket UI colors live in three layers. This page is generated from the same JSON files the CSS is built from, so it cannot drift from the code.
+
+## Semantic tokens
+
+Components use these. Each one points to a primitive, and points to a different one in dark mode.
+
+<SemanticTable />
+
+## Primitive ramps
+
+Raw values. Components never reference these directly. The ratio under each swatch is its contrast against white.
+
+<PrimitiveRamps />
