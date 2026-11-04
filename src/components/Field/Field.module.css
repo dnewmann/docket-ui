@@ -1,0 +1,91 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dk-field-gap);
+  font-family: var(--dk-font-family-sans);
+}
+
+.label {
+  color: var(--dk-field-label);
+  font-size: var(--dk-field-label-size);
+  font-weight: var(--dk-field-label-weight);
+}
+
+.required {
+  color: var(--dk-field-error);
+}
+
+.hint,
+.error {
+  margin: 0;
+  font-size: var(--dk-field-hint-size);
+  line-height: var(--dk-font-lineHeight-normal);
+}
+
+.hint {
+  color: var(--dk-field-hint);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: var(--dk-space-1);
+  color: var(--dk-field-error);
+}
+
+.errorIcon {
+  flex: none;
+  width: 14px;
+  height: 14px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Shared look for text-like controls (TextField, Select). */
+.control {
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--dk-field-height);
+  padding: 0 var(--dk-field-padding-x);
+  border: 1px solid var(--dk-field-border);
+  border-radius: var(--dk-field-radius);
+  background: var(--dk-field-bg);
+  color: var(--dk-field-text);
+  font: inherit;
+  font-size: var(--dk-field-font-size);
+  transition: border-color var(--dk-duration-fast) ease;
+}
+
+.control::placeholder {
+  color: var(--dk-field-placeholder);
+}
+
+.control:hover:not(:disabled) {
+  border-color: var(--dk-field-border-hover);
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--dk-field-border-focus);
+  outline-offset: 1px;
+  border-color: var(--dk-field-border-focus);
+}
+
+.control[aria-invalid='true'] {
+  border-color: var(--dk-field-border-error);
+}
+
+.control:disabled {
+  background: var(--dk-field-bg-disabled);
+  cursor: not-allowed;
+  opacity: 0.7;
+}

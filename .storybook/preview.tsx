@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react-vite';
 import '../src/styles/base.css';
+import docketTheme from './docketTheme';
 
 const preview: Preview = {
   globalTypes: {
@@ -26,6 +27,8 @@ const preview: Preview = {
   ],
   parameters: {
     layout: 'fullscreen',
+    docs: { theme: docketTheme },
+    options: { storySort: { order: ['Introduction', 'Foundations', 'Components', 'Patterns'] } },
     controls: { matchers: { color: /(background|color)$/i } },
     a11y: { test: 'error' },
     viewport: {

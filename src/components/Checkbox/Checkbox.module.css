@@ -1,0 +1,100 @@
+.root {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--dk-space-2);
+  font-family: var(--dk-font-family-sans);
+}
+
+.control {
+  position: relative;
+  flex: none;
+  width: var(--dk-checkbox-size);
+  height: var(--dk-checkbox-size);
+  margin-top: 1px;
+}
+
+/* The real input covers the visual box so clicks and focus land on it. */
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid var(--dk-checkbox-border);
+  border-radius: var(--dk-checkbox-radius);
+  background: var(--dk-checkbox-bg);
+  color: var(--dk-checkbox-checked-mark);
+  pointer-events: none;
+  transition:
+    background-color var(--dk-duration-fast) ease,
+    border-color var(--dk-duration-fast) ease;
+}
+
+.check,
+.dash {
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+
+.input:checked + .box,
+.input:indeterminate + .box {
+  background: var(--dk-checkbox-checked-bg);
+  border-color: var(--dk-checkbox-checked-bg);
+}
+
+.input:checked:not(:indeterminate) + .box .check {
+  display: block;
+}
+
+.input:indeterminate + .box .dash {
+  display: block;
+}
+
+.input:focus-visible + .box {
+  outline: 2px solid var(--dk-color-focus-ring);
+  outline-offset: 2px;
+}
+
+.input[aria-invalid='true'] + .box {
+  border-color: var(--dk-color-status-danger);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  color: var(--dk-color-text-primary);
+  font-size: var(--dk-font-size-sm);
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.description {
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-xs);
+  line-height: var(--dk-font-lineHeight-normal);
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.disabled .input,
+.disabled .label {
+  cursor: not-allowed;
+}

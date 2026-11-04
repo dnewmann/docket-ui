@@ -38,6 +38,13 @@ const pairs = [
   ['color.action.on-primary', 'color.action.danger-hover', 4.5],
   ['color.text.primary', 'color.action.secondary-hover', 4.5],
   ['color.focus.ring', 'color.bg.surface', 3],
+  // WCAG 1.4.11: form control boundaries need 3:1 against their background
+  ['color.border.input', 'color.bg.surface', 3],
+  ['color.border.input', 'color.bg.canvas', 3],
+  ['color.text.primary', 'color.bg.disabled', 4.5],
+  // Error and hint text sit directly on surfaces
+  ['color.status.danger', 'color.bg.surface', 4.5],
+  ['color.text.secondary', 'color.bg.canvas', 4.5],
   ['color.status.success', 'color.status.success-bg', 4.5],
   ['color.status.warning', 'color.status.warning-bg', 4.5],
   ['color.status.danger', 'color.status.danger-bg', 4.5],

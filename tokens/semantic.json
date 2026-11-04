@@ -6,7 +6,8 @@
         "canvas": "{color.slate.50}",
         "surface": "{color.slate.0}",
         "subtle": "{color.slate.100}",
-        "inverse": "{color.slate.900}"
+        "inverse": "{color.slate.900}",
+        "disabled": "{color.slate.100}"
       },
       "text": {
         "primary": "{color.slate.900}",
@@ -18,7 +19,8 @@
       "border": {
         "default": "{color.slate.300}",
         "subtle": "{color.slate.200}",
-        "strong": "{color.slate.500}"
+        "strong": "{color.slate.500}",
+        "input": "{color.slate.500}"
       },
       "action": {
         "primary": "{color.indigo.600}",
@@ -52,7 +54,8 @@
         "canvas": "{color.slate.950}",
         "surface": "{color.slate.900}",
         "subtle": "{color.slate.800}",
-        "inverse": "{color.slate.50}"
+        "inverse": "{color.slate.50}",
+        "disabled": "{color.slate.800}"
       },
       "text": {
         "primary": "{color.slate.50}",
@@ -64,7 +67,8 @@
       "border": {
         "default": "{color.slate.600}",
         "subtle": "{color.slate.700}",
-        "strong": "{color.slate.400}"
+        "strong": "{color.slate.400}",
+        "input": "{color.slate.400}"
       },
       "action": {
         "primary": "{color.indigo.300}",

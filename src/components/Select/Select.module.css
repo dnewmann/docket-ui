@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  padding-right: calc(var(--dk-field-padding-x) + 20px);
+  cursor: pointer;
+}
+
+.chevron {
+  position: absolute;
+  right: var(--dk-field-padding-x);
+  width: 16px;
+  height: 16px;
+  color: var(--dk-field-text);
+  pointer-events: none;
+}
