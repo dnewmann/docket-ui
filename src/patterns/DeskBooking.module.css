@@ -1,0 +1,292 @@
+.page {
+  min-height: 100vh;
+  padding: var(--dk-space-8);
+  box-sizing: border-box;
+  background: var(--dk-color-bg-canvas);
+  color: var(--dk-color-text-primary);
+  font-family: var(--dk-font-family-sans);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--dk-space-4);
+  margin-bottom: var(--dk-space-6);
+}
+
+.h1 {
+  margin: 0;
+  font-size: var(--dk-font-size-3xl);
+  font-weight: var(--dk-font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: var(--dk-space-1) 0 0;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-sm);
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--dk-space-3);
+}
+
+.dateSelect {
+  width: 200px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--dk-space-6);
+  align-items: start;
+}
+
+.mapCard,
+.panel {
+  padding: var(--dk-space-5);
+  border: 1px solid var(--dk-color-border-subtle);
+  border-radius: var(--dk-radius-lg);
+  background: var(--dk-color-bg-surface);
+}
+
+.side {
+  display: grid;
+  gap: var(--dk-space-4);
+}
+
+.cardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dk-space-3);
+  margin-bottom: var(--dk-space-4);
+}
+
+.h2 {
+  margin: 0 0 var(--dk-space-2);
+  font-size: var(--dk-font-size-lg);
+  font-weight: var(--dk-font-weight-semibold);
+}
+
+.cardHeader .h2 {
+  margin: 0;
+}
+
+.legend {
+  display: flex;
+  gap: var(--dk-space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-xs);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1.5px solid var(--swatch-border);
+  background: var(--swatch-bg);
+}
+
+/* State colors, shared by the legend, desks and pills. */
+.available {
+  --swatch-bg: var(--dk-color-bg-surface);
+  --swatch-border: var(--dk-color-border-input);
+  --desk-fill: var(--dk-color-bg-surface);
+  --desk-stroke: var(--dk-color-border-input);
+  --desk-text: var(--dk-color-text-primary);
+}
+.taken {
+  --swatch-bg: var(--dk-color-bg-subtle);
+  --swatch-border: var(--dk-color-border-default);
+  --desk-fill: var(--dk-color-bg-subtle);
+  --desk-stroke: var(--dk-color-border-default);
+  --desk-text: var(--dk-color-text-secondary);
+}
+.mine {
+  --swatch-bg: var(--dk-color-bg-selected);
+  --swatch-border: var(--dk-color-action-primary);
+  --desk-fill: var(--dk-color-bg-selected);
+  --desk-stroke: var(--dk-color-action-primary);
+  --desk-text: var(--dk-color-text-primary);
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.room {
+  fill: var(--dk-color-bg-canvas);
+  stroke: var(--dk-color-border-default);
+  stroke-width: 2;
+}
+
+.window {
+  stroke: var(--dk-color-text-link);
+  stroke-width: 4;
+  stroke-linecap: round;
+  opacity: 0.6;
+}
+
+.roomLabel {
+  fill: var(--dk-color-text-secondary);
+  font-size: 12px;
+  font-family: var(--dk-font-family-sans);
+}
+
+.fixture {
+  fill: var(--dk-color-bg-subtle);
+  stroke: var(--dk-color-border-subtle);
+}
+
+.desk {
+  cursor: pointer;
+  outline: none;
+}
+
+.deskTop {
+  fill: var(--desk-fill);
+  stroke: var(--desk-stroke);
+  stroke-width: 2;
+  transition: stroke-width var(--dk-duration-fast) ease;
+}
+
+.chair {
+  fill: var(--desk-fill);
+  stroke: var(--desk-stroke);
+  stroke-width: 2;
+}
+
+.deskName {
+  fill: var(--desk-text);
+  font: 700 20px var(--dk-font-family-sans);
+}
+
+.deskState {
+  fill: var(--desk-text);
+  font: 500 15px var(--dk-font-family-sans);
+}
+
+.icon {
+  fill: none;
+  stroke: var(--desk-stroke);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.focusRing {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 3;
+}
+
+.desk:hover .deskTop {
+  stroke-width: 3;
+}
+
+.desk:focus-visible .focusRing {
+  stroke: var(--dk-color-focus-ring);
+}
+
+.selected .deskTop {
+  stroke: var(--dk-color-focus-ring);
+  stroke-width: 4;
+}
+
+.meta {
+  display: block;
+  margin: 0;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-sm);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--dk-space-3);
+  margin: var(--dk-space-3) 0 var(--dk-space-4);
+  font-size: var(--dk-font-size-sm);
+}
+
+.pill {
+  display: inline-flex;
+  padding: 2px 10px;
+  border-radius: var(--dk-radius-full);
+  border: 1.5px solid var(--swatch-border);
+  background: var(--swatch-bg);
+  color: var(--dk-color-text-primary);
+  font-size: var(--dk-font-size-xs);
+  font-weight: var(--dk-font-weight-semibold);
+}
+
+.note {
+  margin: 0;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-sm);
+}
+
+.message {
+  min-height: 20px;
+  margin: var(--dk-space-3) 0 0;
+  font-size: var(--dk-font-size-sm);
+  font-weight: var(--dk-font-weight-medium);
+}
+
+.list {
+  display: grid;
+  gap: var(--dk-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dk-space-3);
+  padding: var(--dk-space-3);
+  border: 1px solid var(--dk-color-border-subtle);
+  border-radius: var(--dk-radius-md);
+  font-size: var(--dk-font-size-sm);
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: var(--dk-space-5) var(--dk-space-4);
+  }
+  .h1 {
+    font-size: var(--dk-font-size-2xl);
+  }
+  .dateSelect {
+    width: 100%;
+  }
+  .mapCard,
+  .panel {
+    padding: var(--dk-space-4);
+  }
+}
