@@ -1,0 +1,94 @@
+.root {
+  position: relative;
+}
+
+.input {
+  padding-right: calc(var(--dk-field-padding-x) + 20px);
+}
+
+.chevron {
+  position: absolute;
+  top: calc(var(--dk-field-height) / 2 - 8px);
+  right: var(--dk-field-padding-x);
+  width: 16px;
+  height: 16px;
+  color: var(--dk-field-text);
+  pointer-events: none;
+}
+
+.listbox {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  max-height: var(--dk-listbox-max-height);
+  margin: 0;
+  padding: var(--dk-space-1);
+  overflow-y: auto;
+  list-style: none;
+  border: 1px solid var(--dk-listbox-border);
+  border-radius: var(--dk-listbox-radius);
+  background: var(--dk-listbox-bg);
+  box-shadow: var(--dk-listbox-shadow);
+}
+
+.listbox[hidden] {
+  display: none;
+}
+
+.option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--dk-space-2) calc(var(--dk-space-3) + 20px) var(--dk-space-2) var(--dk-space-3);
+  border-radius: var(--dk-radius-sm);
+  color: var(--dk-listbox-option-text);
+  font-size: var(--dk-font-size-sm);
+  cursor: pointer;
+}
+
+.option[aria-selected='true'] {
+  background: var(--dk-listbox-option-selected);
+  font-weight: var(--dk-font-weight-medium);
+}
+
+.active {
+  background: var(--dk-listbox-option-hover);
+  outline: 2px solid var(--dk-color-focus-ring);
+  outline-offset: -2px;
+}
+
+.optionDescription {
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-xs);
+  font-weight: var(--dk-font-weight-regular);
+}
+
+.check {
+  position: absolute;
+  top: 50%;
+  right: var(--dk-space-3);
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  color: var(--dk-color-action-primary);
+}
+
+.message {
+  padding: var(--dk-space-3);
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-sm);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}

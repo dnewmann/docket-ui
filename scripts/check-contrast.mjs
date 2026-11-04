@@ -42,6 +42,10 @@ const pairs = [
   ['color.border.input', 'color.bg.surface', 3],
   ['color.border.input', 'color.bg.canvas', 3],
   ['color.text.primary', 'color.bg.disabled', 4.5],
+  // Listbox options and table rows in hover and selected states
+  ['color.text.primary', 'color.bg.hover', 4.5],
+  ['color.text.primary', 'color.bg.selected', 4.5],
+  ['color.text.secondary', 'color.bg.subtle', 4.5],
   // Error and hint text sit directly on surfaces
   ['color.status.danger', 'color.bg.surface', 4.5],
   ['color.text.secondary', 'color.bg.canvas', 4.5],
