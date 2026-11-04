@@ -7,7 +7,10 @@
         "surface": "{color.slate.0}",
         "subtle": "{color.slate.100}",
         "inverse": "{color.slate.900}",
-        "disabled": "{color.slate.100}"
+        "disabled": "{color.slate.100}",
+        "overlay": "{color.scrim.light}",
+        "hover": "{color.slate.100}",
+        "selected": "{color.indigo.50}"
       },
       "text": {
         "primary": "{color.slate.900}",
@@ -55,7 +58,10 @@
         "surface": "{color.slate.900}",
         "subtle": "{color.slate.800}",
         "inverse": "{color.slate.50}",
-        "disabled": "{color.slate.800}"
+        "disabled": "{color.slate.800}",
+        "overlay": "{color.scrim.dark}",
+        "hover": "{color.slate.800}",
+        "selected": "{color.indigo.900}"
       },
       "text": {
         "primary": "{color.slate.50}",

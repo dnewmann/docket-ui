@@ -77,5 +77,35 @@
     "track-off": "{color.border.input}",
     "track-on": "{color.action.primary}",
     "thumb-bg": "{color.bg.surface}"
+  },
+  "modal": {
+    "bg": "{color.bg.surface}",
+    "overlay": "{color.bg.overlay}",
+    "radius": "{radius.lg}",
+    "shadow": "{shadow.lg}",
+    "padding": "{space.6}",
+    "width-sm": "400px",
+    "width-md": "560px",
+    "width-lg": "760px",
+    "title-size": "{font.size.xl}"
+  },
+  "listbox": {
+    "bg": "{color.bg.surface}",
+    "border": "{color.border.subtle}",
+    "radius": "{radius.md}",
+    "shadow": "{shadow.md}",
+    "option-hover": "{color.bg.hover}",
+    "option-selected": "{color.bg.selected}",
+    "option-text": "{color.text.primary}",
+    "max-height": "280px"
+  },
+  "table": {
+    "header-bg": "{color.bg.subtle}",
+    "header-text": "{color.text.secondary}",
+    "border": "{color.border.subtle}",
+    "row-hover": "{color.bg.hover}",
+    "cell-padding-y": "{space.3}",
+    "cell-padding-x": "{space.4}",
+    "font-size": "{font.size.sm}"
   }
 }

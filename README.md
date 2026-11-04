@@ -11,7 +11,7 @@ The design system for **Docket**, a fictional legal-operations product. React an
 - **Three-layer tokens, one source of truth.** `tokens/*.json` holds primitives (raw values), semantic tokens (meaning, per theme) and component tokens. A build script turns them into CSS custom properties, validates every reference, and fails if light and dark themes drift apart.
 - **Theming that actually cascades.** Component tokens are re-declared on every themed element, so a `data-theme="dark"` subtree recolors correctly instead of inheriting values frozen at `:root`.
 - **Accessibility as a build gate.** A WCAG contrast check runs over every text/background pair in both themes and blocks the build below 4.5:1. Component tests run axe, and Storybook's a11y addon fails stories with violations.
-- **Branded docs.** Custom Storybook theme, an introduction page, a colors page generated from the token JSON, and a matter intake form built only from library components.
+- **Branded docs.** Custom Storybook theme, an introduction page, a colors page generated from the token JSON, a matter intake form, and a full **Matters dashboard** (app shell, async search, stats, filters, sortable responsive table, modal create flow) built only from library components.
 - **Typed, tested components.** Strict TypeScript, Testing Library tests for behavior (keyboard, loading, disabled, refs), CSS Modules for scoped styles.
 
 ## Architecture
@@ -66,17 +66,16 @@ import '@dnewmann/docket-ui/styles.css';
 | --- | --- |
 | Button | Done |
 | TextField, Select, Checkbox, Switch | Done |
-| Radio, Textarea | Next |
-| Tabs, Modal, Toast, Tooltip | Planned |
-| Table (responsive), Combobox (async), DatePicker | Planned |
+| Modal, Combobox (async), Table (sortable, responsive) | Done |
+| Radio, Textarea, Toast, Tooltip | Next |
+| DatePicker | Planned |
 | EmptyState, Skeleton | Planned |
 
 ## Roadmap
 
-1. Overlays: Modal, Toast, Tooltip
-2. Example dashboard built only from Docket UI, at desktop, tablet and phone sizes
-3. Figma library with Code Connect mappings
-4. AI layer: a tool server that lets an AI agent build pages from these components, with an eval that checks the output uses real components and passes accessibility checks
+1. Toast, Tooltip, DatePicker
+2. Figma library with Code Connect mappings
+3. AI layer: a tool server that lets an AI agent build pages from these components, with an eval that checks the output uses real components and passes accessibility checks
 
 ## License
 

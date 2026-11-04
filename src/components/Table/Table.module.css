@@ -1,0 +1,164 @@
+.container {
+  container-type: inline-size;
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--dk-table-border);
+  border-radius: var(--dk-radius-lg);
+  background: var(--dk-color-bg-surface);
+  font-family: var(--dk-font-family-sans);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--dk-table-font-size);
+  color: var(--dk-color-text-primary);
+}
+
+.caption {
+  padding: var(--dk-space-4) var(--dk-table-cell-padding-x);
+  text-align: left;
+  font-weight: var(--dk-font-weight-semibold);
+  font-size: var(--dk-font-size-md);
+}
+
+.table th,
+.table td {
+  padding: var(--dk-table-cell-padding-y) var(--dk-table-cell-padding-x);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table th {
+  background: var(--dk-table-header-bg);
+  color: var(--dk-table-header-text);
+  font-size: var(--dk-font-size-xs);
+  font-weight: var(--dk-font-weight-semibold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-top: 1px solid var(--dk-table-border);
+}
+
+.table tbody tr:hover {
+  background: var(--dk-table-row-hover);
+}
+
+.table .end {
+  text-align: right;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dk-space-1);
+  margin: -4px -6px;
+  padding: 4px 6px;
+  border: none;
+  border-radius: var(--dk-radius-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.sortButton:hover {
+  color: var(--dk-color-text-primary);
+}
+
+.sortButton:focus-visible {
+  outline: 2px solid var(--dk-color-focus-ring);
+  outline-offset: 1px;
+}
+
+.sortIcon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+}
+
+.sortActive {
+  opacity: 1;
+  color: var(--dk-color-action-primary);
+}
+
+.empty {
+  padding: var(--dk-space-10) var(--dk-space-4);
+  text-align: center;
+  color: var(--dk-color-text-secondary);
+}
+
+.emptyRow:hover {
+  background: transparent;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Narrow containers: each row becomes a labelled card. */
+@container (max-width: 600px) {
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+  }
+
+  .table tbody tr {
+    padding: var(--dk-space-3) 0;
+  }
+
+  .table td {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: var(--dk-space-3);
+    padding: var(--dk-space-1) var(--dk-table-cell-padding-x);
+    text-align: left;
+  }
+
+  .table td.end {
+    text-align: left;
+  }
+
+  /* Keep inline content (badges, links) at its natural width in the grid. */
+  .table td > * {
+    justify-self: start;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    color: var(--dk-table-header-text);
+    font-size: var(--dk-font-size-xs);
+    font-weight: var(--dk-font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .empty {
+    display: block;
+  }
+
+  .empty::before {
+    content: none;
+  }
+}

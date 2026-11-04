@@ -20,7 +20,9 @@ export function PrimitiveRamps() {
   const color = primitives.color as Record<string, Scale>;
   return (
     <div style={{ display: 'grid', gap: 20 }}>
-      {Object.entries(color).map(([name, scale]) => (
+      {Object.entries(color)
+        .filter(([, scale]) => Object.values(scale).every((v) => v.startsWith('#')))
+        .map(([name, scale]) => (
         <div key={name}>
           <div style={{ fontWeight: 600, marginBottom: 8, textTransform: 'capitalize' }}>{name}</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
