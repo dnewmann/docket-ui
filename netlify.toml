@@ -1,0 +1,8 @@
+# Netlify hosts the Storybook docs site. Settings live here so they are versioned with the code.
+[build]
+  command = "npm run build-storybook"
+  publish = "storybook-static"
+
+[build.environment]
+  NODE_VERSION = "22"
+  STORYBOOK_DISABLE_TELEMETRY = "1"
