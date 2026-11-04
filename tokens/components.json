@@ -1,0 +1,23 @@
+{
+  "$description": "Layer 3: per-component tokens. Values reference semantic tokens ({color.action.primary}) or primitives for non-color scales ({space.4}). Theme-independent: they resolve through the semantic layer.",
+  "button": {
+    "radius": "{radius.md}",
+    "font-weight": "{font.weight.semibold}",
+    "gap": "{space.2}",
+    "sm": { "height": "32px", "padding-x": "{space.3}", "font-size": "{font.size.sm}" },
+    "md": { "height": "40px", "padding-x": "{space.4}", "font-size": "{font.size.sm}" },
+    "lg": { "height": "48px", "padding-x": "{space.5}", "font-size": "{font.size.md}" },
+    "primary": {
+      "bg": "{color.action.primary}", "bg-hover": "{color.action.primary-hover}",
+      "bg-active": "{color.action.primary-active}", "text": "{color.action.on-primary}"
+    },
+    "secondary": {
+      "bg": "{color.action.secondary}", "bg-hover": "{color.action.secondary-hover}",
+      "text": "{color.text.primary}", "border": "{color.border.default}"
+    },
+    "ghost": { "bg-hover": "{color.action.ghost-hover}", "text": "{color.text.primary}" },
+    "danger": {
+      "bg": "{color.action.danger}", "bg-hover": "{color.action.danger-hover}", "text": "{color.action.on-primary}"
+    }
+  }
+}

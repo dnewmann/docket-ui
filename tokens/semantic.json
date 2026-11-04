@@ -1,0 +1,95 @@
+{
+  "$description": "Layer 2: meaning. Values are references to primitives ({color.slate.0}). Components use only this layer and component tokens.",
+  "light": {
+    "color": {
+      "bg": {
+        "canvas": "{color.slate.50}",
+        "surface": "{color.slate.0}",
+        "subtle": "{color.slate.100}",
+        "inverse": "{color.slate.900}"
+      },
+      "text": {
+        "primary": "{color.slate.900}",
+        "secondary": "{color.slate.600}",
+        "disabled": "{color.slate.400}",
+        "inverse": "{color.slate.0}",
+        "link": "{color.indigo.600}"
+      },
+      "border": {
+        "default": "{color.slate.300}",
+        "subtle": "{color.slate.200}",
+        "strong": "{color.slate.500}"
+      },
+      "action": {
+        "primary": "{color.indigo.600}",
+        "primary-hover": "{color.indigo.700}",
+        "primary-active": "{color.indigo.800}",
+        "on-primary": "{color.slate.0}",
+        "secondary": "{color.slate.0}",
+        "secondary-hover": "{color.slate.100}",
+        "ghost-hover": "{color.slate.100}",
+        "danger": "{color.vermilion.600}",
+        "danger-hover": "{color.vermilion.700}"
+      },
+      "focus": {
+        "ring": "{color.indigo.500}"
+      },
+      "status": {
+        "success": "{color.green.600}",
+        "success-bg": "{color.green.100}",
+        "warning": "{color.amber.700}",
+        "warning-bg": "{color.amber.100}",
+        "danger": "{color.vermilion.700}",
+        "danger-bg": "{color.vermilion.100}",
+        "info": "{color.indigo.600}",
+        "info-bg": "{color.indigo.50}"
+      }
+    }
+  },
+  "dark": {
+    "color": {
+      "bg": {
+        "canvas": "{color.slate.950}",
+        "surface": "{color.slate.900}",
+        "subtle": "{color.slate.800}",
+        "inverse": "{color.slate.50}"
+      },
+      "text": {
+        "primary": "{color.slate.50}",
+        "secondary": "{color.slate.300}",
+        "disabled": "{color.slate.500}",
+        "inverse": "{color.slate.900}",
+        "link": "{color.indigo.300}"
+      },
+      "border": {
+        "default": "{color.slate.600}",
+        "subtle": "{color.slate.700}",
+        "strong": "{color.slate.400}"
+      },
+      "action": {
+        "primary": "{color.indigo.300}",
+        "primary-hover": "{color.indigo.200}",
+        "primary-active": "{color.indigo.100}",
+        "on-primary": "{color.slate.950}",
+        "secondary": "{color.slate.900}",
+        "secondary-hover": "{color.slate.800}",
+        "ghost-hover": "{color.slate.800}",
+        "danger": "{color.vermilion.300}",
+        "danger-hover": "{color.vermilion.100}"
+      },
+      "focus": {
+        "ring": "{color.indigo.300}"
+      },
+      "status": {
+        "success": "{color.green.300}",
+        "success-bg": "{color.green.900}",
+        "warning": "{color.amber.300}",
+        "warning-bg": "{color.amber.900}",
+        "danger": "{color.vermilion.300}",
+        "danger-bg": "{color.vermilion.900}",
+        "info": "{color.indigo.300}",
+        "info-bg": "{color.indigo.900}"
+      }
+    }
+  }
+}

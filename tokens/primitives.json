@@ -1,0 +1,108 @@
+{
+  "$description": "Layer 1: raw values. Never referenced by components directly.",
+  "color": {
+    "indigo": {
+      "50": "#EEF0FD",
+      "100": "#DCE0FB",
+      "200": "#B9C1F6",
+      "300": "#8F9BEE",
+      "400": "#6676E3",
+      "500": "#4555D6",
+      "600": "#3442BE",
+      "700": "#2A359A",
+      "800": "#222B78",
+      "900": "#1A2058"
+    },
+    "slate": {
+      "0": "#FFFFFF",
+      "50": "#F7F8FA",
+      "100": "#EEF0F4",
+      "200": "#DDE1E8",
+      "300": "#C2C8D3",
+      "400": "#8E97A8",
+      "500": "#667085",
+      "600": "#4B5468",
+      "700": "#343B4C",
+      "800": "#232836",
+      "900": "#161A24",
+      "950": "#0E1118"
+    },
+    "green": {
+      "100": "#DDF5E8",
+      "300": "#6FD3A0",
+      "500": "#1F9D5C",
+      "600": "#167A47",
+      "700": "#0F5C35",
+      "900": "#0A3D24"
+    },
+    "amber": {
+      "100": "#FDF0D5",
+      "300": "#F2C060",
+      "500": "#D18A0A",
+      "600": "#A86E04",
+      "700": "#7A5003",
+      "900": "#4D3302"
+    },
+    "vermilion": {
+      "100": "#FDE3DC",
+      "300": "#F59A80",
+      "500": "#E04A24",
+      "600": "#C23A17",
+      "700": "#952B10",
+      "900": "#5E1A09"
+    }
+  },
+  "space": {
+    "0": "0",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "8": "32px",
+    "10": "40px",
+    "12": "48px"
+  },
+  "radius": {
+    "none": "0",
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "full": "9999px"
+  },
+  "font": {
+    "family": {
+      "sans": "'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif",
+      "mono": "'JetBrains Mono', ui-monospace, SFMono-Regular, monospace"
+    },
+    "size": {
+      "xs": "12px",
+      "sm": "14px",
+      "md": "16px",
+      "lg": "18px",
+      "xl": "20px",
+      "2xl": "24px",
+      "3xl": "30px"
+    },
+    "weight": {
+      "regular": "400",
+      "medium": "500",
+      "semibold": "600",
+      "bold": "700"
+    },
+    "lineHeight": {
+      "tight": "1.2",
+      "normal": "1.5"
+    }
+  },
+  "shadow": {
+    "sm": "0 1px 2px rgba(16, 24, 40, 0.06)",
+    "md": "0 4px 12px rgba(16, 24, 40, 0.10)",
+    "lg": "0 12px 32px rgba(16, 24, 40, 0.16)"
+  },
+  "duration": {
+    "fast": "120ms",
+    "normal": "200ms"
+  }
+}

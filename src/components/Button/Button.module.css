@@ -1,0 +1,132 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--dk-button-radius);
+  font-family: var(--dk-font-family-sans);
+  font-weight: var(--dk-button-font-weight);
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--dk-duration-fast) ease,
+    border-color var(--dk-duration-fast) ease;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--dk-color-focus-ring);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dk-button-gap);
+}
+
+.icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+}
+
+.icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sizes */
+.sm {
+  height: var(--dk-button-sm-height);
+  padding: 0 var(--dk-button-sm-padding-x);
+  font-size: var(--dk-button-sm-font-size);
+}
+.md {
+  height: var(--dk-button-md-height);
+  padding: 0 var(--dk-button-md-padding-x);
+  font-size: var(--dk-button-md-font-size);
+}
+.lg {
+  height: var(--dk-button-lg-height);
+  padding: 0 var(--dk-button-lg-padding-x);
+  font-size: var(--dk-button-lg-font-size);
+}
+
+/* Variants */
+.primary {
+  background: var(--dk-button-primary-bg);
+  color: var(--dk-button-primary-text);
+}
+.primary:hover:not(:disabled) {
+  background: var(--dk-button-primary-bg-hover);
+}
+.primary:active:not(:disabled) {
+  background: var(--dk-button-primary-bg-active);
+}
+
+.secondary {
+  background: var(--dk-button-secondary-bg);
+  color: var(--dk-button-secondary-text);
+  border-color: var(--dk-button-secondary-border);
+}
+.secondary:hover:not(:disabled) {
+  background: var(--dk-button-secondary-bg-hover);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--dk-button-ghost-text);
+}
+.ghost:hover:not(:disabled) {
+  background: var(--dk-button-ghost-bg-hover);
+}
+
+.danger {
+  background: var(--dk-button-danger-bg);
+  color: var(--dk-button-danger-text);
+}
+.danger:hover:not(:disabled) {
+  background: var(--dk-button-danger-bg-hover);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Loading: hide the label but keep its width so the layout does not jump. */
+.loading {
+  cursor: progress;
+}
+.loading .content {
+  visibility: hidden;
+}
+
+.spinner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerCircle {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--dk-radius-full);
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,21 @@
+/* Minimal base layer. Apps opt in by importing @dnewmann/docket-ui/styles.css. */
+@import '../tokens/tokens.css';
+
+.dk-root,
+[data-theme] {
+  background: var(--dk-color-bg-canvas);
+  color: var(--dk-color-text-primary);
+  font-family: var(--dk-font-family-sans);
+  font-size: var(--dk-font-size-md);
+  line-height: var(--dk-font-lineHeight-normal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
