@@ -1,0 +1,95 @@
+.popover {
+  position: fixed;
+  z-index: 50;
+  box-sizing: border-box;
+  width: min(340px, calc(100vw - 32px));
+  padding: var(--dk-space-4) var(--dk-space-5);
+  border-radius: var(--dk-radius-lg);
+  background: var(--dk-color-bg-inverse);
+  color: var(--dk-color-text-inverse);
+  box-shadow: var(--dk-shadow-lg);
+  font-family: var(--dk-font-family-sans);
+  outline: none;
+  animation: tour-in var(--dk-duration-normal) ease-out;
+}
+
+.popover:focus-visible {
+  outline: 2px solid var(--dk-color-focus-ring);
+  outline-offset: 3px;
+}
+
+/* Arrow pointing at the highlighted section. */
+.popover::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  width: 14px;
+  height: 14px;
+  background: inherit;
+  transform: rotate(45deg);
+}
+.below::before {
+  top: -7px;
+}
+.above::before {
+  bottom: -7px;
+}
+
+.counter {
+  margin: 0 0 var(--dk-space-1);
+  opacity: 0.75;
+  font-size: var(--dk-font-size-xs);
+  font-weight: var(--dk-font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 var(--dk-space-1);
+  font-size: var(--dk-font-size-md);
+  font-weight: var(--dk-font-weight-semibold);
+}
+
+.body {
+  margin: 0 0 var(--dk-space-4);
+  font-size: var(--dk-font-size-sm);
+  line-height: var(--dk-font-lineHeight-normal);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--dk-space-2);
+}
+
+/* Buttons sit on an inverse surface, so give them inverse colors. */
+.actions button {
+  --dk-button-ghost-text: var(--dk-color-text-inverse);
+  --dk-button-ghost-bg-hover: color-mix(in srgb, var(--dk-color-text-inverse) 12%, transparent);
+  --dk-button-secondary-bg: transparent;
+  --dk-button-secondary-bg-hover: color-mix(in srgb, var(--dk-color-text-inverse) 12%, transparent);
+  --dk-button-secondary-text: var(--dk-color-text-inverse);
+  --dk-button-secondary-border: color-mix(in srgb, var(--dk-color-text-inverse) 50%, transparent);
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* The highlighted section on the page. Global so any element can be a target. */
+:global([data-tour-active]) {
+  position: relative;
+  z-index: 40;
+  outline: 3px solid var(--dk-color-focus-ring);
+  outline-offset: 6px;
+  border-radius: var(--dk-radius-lg);
+  box-shadow: 0 0 0 9999px color-mix(in srgb, var(--dk-color-bg-inverse) 35%, transparent);
+  transition: outline-offset var(--dk-duration-normal) ease;
+}
+
+@keyframes tour-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
