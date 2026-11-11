@@ -1,5 +1,5 @@
 {
-  "name": "@dnewmann/docket-ui",
+  "name": "docket-ui",
   "version": "0.2.0",
   "description": "Docket UI: the design system for Docket, a fictional legal-ops product. React + TypeScript components on a three-layer token architecture.",
   "main": "./dist/docket-ui.js",
