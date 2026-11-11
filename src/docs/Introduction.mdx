@@ -13,23 +13,16 @@ import { Button } from '../components/Button';
       'radial-gradient(120% 120% at 0% 100%, #1D6E77 0%, rgba(29,110,119,0) 55%), radial-gradient(120% 130% at 100% 100%, #5A3CC9 0%, rgba(90,60,201,0) 60%), #18181B',
   }}
 >
-  <p style={{ margin: 0, color: '#BCA9FF', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: 12 }}>
-    Design system
-  </p>
-  <div role="heading" aria-level={1} style={{ margin: '12px 0 12px', fontSize: 52, lineHeight: 1.05, fontWeight: 300, letterSpacing: '-0.03em', color: '#F4F4F2' }}>
-    Docket <span style={{ fontWeight: 700 }}>UI</span>
-  </div>
-  <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, color: '#C6C6C2', maxWidth: 620 }}>
-    The component library for Docket, a fictional legal-operations product. Built so that designers,
-    developers and AI agents all build from the same parts.
-  </p>
+  <p style={{ margin: 0, color: '#BCA9FF', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: 12 }}>Design system</p>
+  <div role="heading" aria-level={1} style={{ margin: '12px 0 12px', fontSize: 52, lineHeight: 1.05, fontWeight: 300, letterSpacing: '-0.03em', color: '#F4F4F2' }}>Docket <span style={{ fontWeight: 700, fontSize: 'inherit', lineHeight: 'inherit', color: 'inherit' }}>UI</span></div>
+  <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, color: '#C6C6C2', maxWidth: 620 }}>The component library for Docket, a fictional legal-operations product. Built so that designers, developers and AI agents all build from the same parts.</p>
 </div>
 
 ## What's inside
 
 - **Tokens:** primitives, semantic tokens (light and dark) and component tokens, in JSON. One build step turns them into CSS variables.
 - **Components:** 25 React and TypeScript components, styled only with tokens: form controls (TextField, Textarea, NumberField, Select, Checkbox, RadioGroup, Switch, SegmentedControl), overlays (Modal, Menu, Tooltip), data display (Table, Stat, Badge, Progress, Card), navigation (Tabs, Pagination, Accordion), feedback (Alert, Spinner, Skeleton, EmptyState), plus Button and Combobox. Each one has tests for behavior and accessibility.
-- **Install:** `npm install @dnewmann/docket-ui`, then import `@dnewmann/docket-ui/styles.css` once.
+- **Install:** `npm install docket-ui`, then import `docket-ui/styles.css` once.
 - **Patterns:** real screens assembled only from the library: a matter intake form, a matters dashboard, desk booking with a guided tour, and an AI assistant with saved chats and prompts.
 
 ## Principles

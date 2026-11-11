@@ -44,7 +44,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dnewmann/docket-ui"
+    "url": "git+https://github.com/dnewmann/docket-ui.git"
   },
   "files": [
     "dist"
