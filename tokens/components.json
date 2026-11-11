@@ -107,5 +107,46 @@
     "cell-padding-y": "{space.3}",
     "cell-padding-x": "{space.4}",
     "font-size": "{font.size.sm}"
+  },
+  "tabs": {
+    "gap": "{space.1}",
+    "padding-x": "{space.4}",
+    "height": "40px",
+    "font-size": "{font.size.sm}",
+    "font-weight": "{font.weight.semibold}",
+    "text": "{color.text.secondary}",
+    "text-selected": "{color.text.primary}",
+    "indicator": "{color.action.primary}",
+    "border": "{color.border.subtle}",
+    "bg-hover": "{color.bg.hover}"
+  },
+  "tooltip": {
+    "bg": "{color.bg.inverse}",
+    "text": "{color.text.inverse}",
+    "radius": "{radius.sm}",
+    "padding-x": "{space.2}",
+    "padding-y": "{space.1}",
+    "font-size": "{font.size.xs}",
+    "max-width": "240px"
+  },
+  "stat": {
+    "label": "{color.text.secondary}",
+    "label-size": "{font.size.sm}",
+    "value": "{color.text.primary}",
+    "value-size": "{font.size.2xl}",
+    "value-weight": "{font.weight.bold}",
+    "up": "{color.status.success}",
+    "down": "{color.status.danger}",
+    "flat": "{color.text.secondary}"
+  },
+  "badge": {
+    "radius": "{radius.full}",
+    "padding-x": "{space.2}",
+    "font-size": "{font.size.xs}",
+    "font-weight": "{font.weight.semibold}"
+  },
+  "skeleton": {
+    "bg": "{color.bg.subtle}",
+    "radius": "{radius.sm}"
   }
 }

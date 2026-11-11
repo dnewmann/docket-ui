@@ -1,0 +1,62 @@
+.root {
+  display: grid;
+  gap: var(--dk-space-1);
+  font-family: var(--dk-font-family-sans);
+}
+
+.root p {
+  margin: 0;
+}
+
+.label {
+  color: var(--dk-stat-label);
+  font-size: var(--dk-stat-label-size);
+}
+
+.value {
+  color: var(--dk-stat-value);
+  font-size: var(--dk-stat-value-size);
+  font-weight: var(--dk-stat-value-weight);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.delta {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: var(--dk-font-size-sm);
+  font-weight: var(--dk-font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.up {
+  color: var(--dk-stat-up);
+}
+
+.down {
+  color: var(--dk-stat-down);
+}
+
+.flat {
+  color: var(--dk-stat-flat);
+}
+
+.deltaLabel {
+  color: var(--dk-color-text-secondary);
+  font-weight: var(--dk-font-weight-regular);
+}
+
+.hint {
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-xs);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

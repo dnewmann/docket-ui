@@ -1,0 +1,65 @@
+.root {
+  font-family: var(--dk-font-family-sans);
+}
+
+.list {
+  display: flex;
+  gap: var(--dk-tabs-gap);
+  border-bottom: 1px solid var(--dk-tabs-border);
+  overflow-x: auto;
+}
+
+.tab {
+  position: relative;
+  flex: none;
+  height: var(--dk-tabs-height);
+  padding: 0 var(--dk-tabs-padding-x);
+  border: none;
+  border-radius: var(--dk-radius-sm) var(--dk-radius-sm) 0 0;
+  background: transparent;
+  color: var(--dk-tabs-text);
+  font: inherit;
+  font-size: var(--dk-tabs-font-size);
+  font-weight: var(--dk-tabs-font-weight);
+  cursor: pointer;
+}
+
+.tab:hover:not(:disabled) {
+  background: var(--dk-tabs-bg-hover);
+  color: var(--dk-tabs-text-selected);
+}
+
+.tab[aria-selected='true'] {
+  color: var(--dk-tabs-text-selected);
+}
+
+/* Selected state uses a bar, not only color. */
+.tab[aria-selected='true']::after {
+  content: '';
+  position: absolute;
+  right: var(--dk-space-2);
+  bottom: -1px;
+  left: var(--dk-space-2);
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--dk-tabs-indicator);
+}
+
+.tab:focus-visible,
+.panel:focus-visible {
+  outline: 2px solid var(--dk-color-focus-ring);
+  outline-offset: 2px;
+}
+
+.tab:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.panel {
+  padding-top: var(--dk-space-4);
+}
+
+.panel[hidden] {
+  display: none;
+}

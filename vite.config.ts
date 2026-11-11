@@ -18,7 +18,11 @@ export default defineConfig({
   },
   build: {
     lib: { entry: 'src/index.ts', formats: ['es'], fileName: 'docket-ui' },
-    rollupOptions: { external: ['react', 'react-dom', 'react/jsx-runtime'] },
+    rollupOptions: {
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      // Components use hooks, so frameworks with Server Components (Next.js) must load them on the client.
+      output: { banner: "'use client';" },
+    },
     cssCodeSplit: false,
   },
   test: {

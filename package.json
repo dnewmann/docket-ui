@@ -1,6 +1,6 @@
 {
   "name": "@dnewmann/docket-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Docket UI: the design system for Docket, a fictional legal-ops product. React + TypeScript components on a three-layer token architecture.",
   "main": "./dist/docket-ui.js",
   "scripts": {
@@ -64,5 +64,6 @@
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
-  }
+  },
+  "homepage": "https://docket-ui.netlify.app"
 }
