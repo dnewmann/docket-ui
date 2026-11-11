@@ -10,4 +10,9 @@ describe('Card', () => {
     expect(region).toHaveTextContent('Updated daily');
     expect(await axe(container)).toHaveNoViolations();
   });
+
+  it('applies the feature variant', () => {
+    render(<Card title="Highlight" variant="feature">Body</Card>);
+    expect(screen.getByRole('region', { name: 'Highlight' }).className).toContain('feature');
+  });
 });

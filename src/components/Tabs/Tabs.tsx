@@ -17,6 +17,8 @@ export interface TabsProps {
   /** Initial tab id when uncontrolled. Defaults to the first enabled tab. */
   defaultValue?: string;
   onValueChange?: (id: string) => void;
+  /** "underline" for page sections, "pill" for compact filters and view switches. */
+  variant?: 'underline' | 'pill';
   className?: string;
 }
 
@@ -25,7 +27,7 @@ export interface TabsProps {
  * pattern: arrow keys move between tabs, Home and End jump to the ends, and
  * only the selected tab is in the Tab order.
  */
-export function Tabs({ items, label, value, defaultValue, onValueChange, className }: TabsProps) {
+export function Tabs({ items, label, value, defaultValue, onValueChange, variant = 'underline', className }: TabsProps) {
   const baseId = useId();
   const enabled = items.filter((t) => !t.disabled);
   const [internal, setInternal] = useState(defaultValue ?? enabled[0]?.id);
@@ -51,7 +53,7 @@ export function Tabs({ items, label, value, defaultValue, onValueChange, classNa
   }
 
   return (
-    <div className={[styles.root, className].filter(Boolean).join(' ')}>
+    <div className={[styles.root, variant === 'pill' && styles.pill, className].filter(Boolean).join(' ')}>
       <div role="tablist" aria-label={label} className={styles.list}>
         {items.map((tab) => {
           const isSelected = tab.id === selected;

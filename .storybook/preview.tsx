@@ -17,7 +17,7 @@ const preview: Preview = {
       },
     },
   },
-  initialGlobals: { theme: 'light' },
+  initialGlobals: { theme: 'dark' },
   decorators: [
     (Story, context) => (
       <div data-theme={context.globals.theme} style={{ padding: 24, minHeight: '100vh', boxSizing: 'border-box' }}>

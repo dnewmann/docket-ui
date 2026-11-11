@@ -7,15 +7,17 @@ export interface CardProps extends Omit<HTMLAttributes<HTMLElement>, 'title'> {
   /** Buttons or links shown at the top right of the header. */
   actions?: ReactNode;
   footer?: ReactNode;
+  /** "feature" adds the brand gradient. Use for at most one highlight per view. */
+  variant?: 'default' | 'feature';
 }
 
 /** A surface that groups related content. With a title it becomes a labelled section. */
-export function Card({ title, description, actions, footer, children, className, ...rest }: CardProps) {
+export function Card({ title, description, actions, footer, variant = 'default', children, className, ...rest }: CardProps) {
   const titleId = useId();
   return (
     <section
       aria-labelledby={title ? titleId : undefined}
-      className={[styles.card, className].filter(Boolean).join(' ')}
+      className={[styles.card, variant === 'feature' && styles.feature, className].filter(Boolean).join(' ')}
       {...rest}
     >
       {(title || actions) && (

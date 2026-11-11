@@ -1,7 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="172" height="32" viewBox="0 0 172 32" role="img" aria-label="Docket UI">
-  <rect x="0" y="0" width="32" height="32" rx="8" fill="#3442BE"/>
-  <path d="M9 8h7.5a8 8 0 0 1 0 16H9z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M9 13.5h6M9 18.5h4" stroke="#8F9BEE" stroke-width="2.4" stroke-linecap="round"/>
-  <text x="42" y="22" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#161A24" letter-spacing="-0.3">Docket</text>
-  <text x="112" y="22" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="500" fill="#3442BE">UI</text>
+  <defs>
+    <linearGradient id="dk-aurora" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E9FAA"/>
+      <stop offset="0.55" stop-color="#6B4FDE"/>
+      <stop offset="1" stop-color="#A08AFC"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="32" height="32" rx="10" fill="url(#dk-aurora)"/>
+  <path d="M10 8h6.5a8 8 0 0 1 0 16H10z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="42" y="22" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#F4F4F2" letter-spacing="-0.3">Docket</text>
+  <text x="112" y="22" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="400" fill="#BCA9FF">UI</text>
 </svg>

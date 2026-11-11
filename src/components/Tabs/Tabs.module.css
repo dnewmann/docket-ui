@@ -56,6 +56,30 @@
   opacity: 0.5;
 }
 
+/* Pill variant: filled selected tab, no underline. Selected also gets bold weight and a border, not only a fill. */
+.pill .list {
+  gap: var(--dk-space-2);
+  border-bottom: none;
+}
+.pill .tab {
+  border: 1px solid transparent;
+  border-radius: var(--dk-radius-full);
+  background: var(--dk-tabs-pill-bg);
+  font-weight: var(--dk-font-weight-medium);
+}
+.pill .tab[aria-selected='true'] {
+  border-color: var(--dk-tabs-pill-bg-selected);
+  background: var(--dk-tabs-pill-bg-selected);
+  color: var(--dk-tabs-pill-text-selected);
+  font-weight: var(--dk-tabs-font-weight);
+}
+.pill .tab[aria-selected='true']::after {
+  display: none;
+}
+.pill .tab:hover:not(:disabled):not([aria-selected='true']) {
+  background: var(--dk-tabs-bg-hover);
+}
+
 .panel {
   padding-top: var(--dk-space-4);
 }

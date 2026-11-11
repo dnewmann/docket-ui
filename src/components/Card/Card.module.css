@@ -7,6 +7,10 @@
   color: var(--dk-color-text-primary);
   font-family: var(--dk-font-family-sans);
 }
+.feature {
+  background: var(--dk-card-bg-feature);
+  border-color: transparent;
+}
 .header {
   display: flex;
   flex-wrap: wrap;

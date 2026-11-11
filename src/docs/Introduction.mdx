@@ -3,12 +3,23 @@ import { Button } from '../components/Button';
 
 <Meta title="Introduction" />
 
-<div style={{ padding: '8px 0 24px' }}>
-  <p style={{ margin: 0, color: '#3442BE', fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase', fontSize: 12 }}>
+<div
+  style={{
+    margin: '0 0 32px',
+    padding: '48px 40px',
+    borderRadius: 28,
+    color: '#F4F4F2',
+    background:
+      'radial-gradient(120% 120% at 0% 100%, #1D6E77 0%, rgba(29,110,119,0) 55%), radial-gradient(120% 130% at 100% 100%, #5A3CC9 0%, rgba(90,60,201,0) 60%), #18181B',
+  }}
+>
+  <p style={{ margin: 0, color: '#BCA9FF', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: 12 }}>
     Design system
   </p>
-  <h1 style={{ margin: '4px 0 8px', fontSize: 40, letterSpacing: '-0.02em' }}>Docket UI</h1>
-  <p style={{ margin: 0, fontSize: 18, color: '#4B5468', maxWidth: 640 }}>
+  <div role="heading" aria-level={1} style={{ margin: '12px 0 12px', fontSize: 52, lineHeight: 1.05, fontWeight: 300, letterSpacing: '-0.03em', color: '#F4F4F2' }}>
+    Docket <span style={{ fontWeight: 700 }}>UI</span>
+  </div>
+  <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, color: '#C6C6C2', maxWidth: 620 }}>
     The component library for Docket, a fictional legal-operations product. Built so that designers,
     developers and AI agents all build from the same parts.
   </p>
@@ -27,6 +38,7 @@ import { Button } from '../components/Button';
 2. **Accessibility is a build gate.** Every text and control color pair is checked against WCAG AA in both themes, components are tested with axe, and stories fail on accessibility violations.
 3. **Native first.** Use the platform (`<button>`, `<select>`, `<input type="checkbox">`) and add only what it is missing, so keyboard and screen reader support come for free.
 4. **One primary action per view.**
+5. **Minimal color, generous space.** Neutrals do the work; violet marks focus and selection; the aurora gradient is reserved for one highlight per view.
 
 ## Try it
 

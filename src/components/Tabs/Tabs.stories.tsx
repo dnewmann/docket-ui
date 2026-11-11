@@ -28,4 +28,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {};
+export const Pill: Story = { args: { variant: 'pill' } };
 export const StartOnSecondTab: Story = { args: { defaultValue: 'documents' } };

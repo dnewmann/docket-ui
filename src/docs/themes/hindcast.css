@@ -1,0 +1,102 @@
+/*
+ * Example theme: Hindcast. Minimal color, generous space, pill shapes.
+ * Only semantic and component tokens are overridden; no component code changes.
+ * Apply on the element that has data-theme (or :root) so component tokens resolve against it.
+ */
+
+.hc-light[data-theme],
+.hc-dark[data-theme] {
+  /* Shape and space */
+  --dk-button-radius: 999px;
+  --dk-button-md-height: 48px;
+  --dk-button-md-padding-x: 24px;
+  --dk-button-sm-height: 36px;
+  --dk-button-sm-padding-x: 16px;
+  --dk-field-radius: 16px;
+  --dk-field-height: 52px;
+  --dk-field-padding-x: 18px;
+  --dk-card-radius: 28px;
+  --dk-card-padding: 32px;
+  --dk-card-shadow: none;
+  --dk-segmented-radius: 999px;
+  --dk-segmented-height: 44px;
+  --dk-tabs-height: 44px;
+  --dk-tabs-padding-x: 20px;
+  --dk-badge-padding-x: 12px;
+  --dk-progress-height: 10px;
+  --dk-stat-value-size: 48px;
+  --dk-stat-label-size: 15px;
+  --dk-menu-radius: 20px;
+  --dk-tooltip-radius: 10px;
+}
+
+/* Light: warm off-white, black as the only accent */
+.hc-light[data-theme] {
+  --dk-color-bg-canvas: #f4f3ef;
+  --dk-color-bg-surface: #ffffff;
+  --dk-color-bg-subtle: #efeee9;
+  --dk-color-bg-hover: #efeee9;
+  --dk-color-bg-selected: #efeee9;
+  --dk-color-bg-inverse: #141414;
+  --dk-color-text-primary: #141414;
+  --dk-color-text-secondary: #5f5e66;
+  --dk-color-text-inverse: #ffffff;
+  --dk-color-text-link: #141414;
+  --dk-color-border-subtle: #e7e6e1;
+  --dk-color-border-default: #d5d4ce;
+  --dk-color-border-input: #85848b;
+  --dk-color-action-primary: #141414;
+  --dk-color-action-primary-hover: #2c2c2f;
+  --dk-color-action-primary-active: #000000;
+  --dk-color-action-on-primary: #ffffff;
+  --dk-color-action-secondary: #ffffff;
+  --dk-color-action-secondary-hover: #f1f0ec;
+  --dk-color-action-ghost-hover: #efeee9;
+  --dk-color-focus-ring: #141414;
+  --dk-color-status-success: #17784a;
+  --dk-color-status-success-bg: #e3f3ea;
+  --dk-color-status-danger: #b42318;
+  --dk-color-status-danger-bg: #fce8ea;
+  --dk-color-status-warning: #85580a;
+  --dk-color-status-warning-bg: #fbf0dc;
+  --dk-color-status-info: #3d3d44;
+  --dk-color-status-info-bg: #efeee9;
+  --dk-card-border: transparent;
+  --dk-card-bg-feature: #ffffff;
+}
+
+/* Dark: near-black with one quiet plum glow */
+.hc-dark[data-theme] {
+  --dk-color-bg-canvas: #0e0d10;
+  --dk-color-bg-surface: #18161b;
+  --dk-color-bg-subtle: #222026;
+  --dk-color-bg-hover: #29262e;
+  --dk-color-bg-selected: #29262e;
+  --dk-color-bg-inverse: #f4f2f5;
+  --dk-color-text-primary: #f4f2f5;
+  --dk-color-text-secondary: #aaa6b0;
+  --dk-color-text-inverse: #141316;
+  --dk-color-text-link: #f4f2f5;
+  --dk-color-border-subtle: #29262e;
+  --dk-color-border-default: #3a3640;
+  --dk-color-border-input: #8a8592;
+  --dk-color-action-primary: #f4f2f5;
+  --dk-color-action-primary-hover: #e2dfe5;
+  --dk-color-action-primary-active: #cfcbd3;
+  --dk-color-action-on-primary: #141316;
+  --dk-color-action-secondary: #18161b;
+  --dk-color-action-secondary-hover: #29262e;
+  --dk-color-action-ghost-hover: #29262e;
+  --dk-color-focus-ring: #e9c7f0;
+  --dk-color-status-success: #7fdaa6;
+  --dk-color-status-success-bg: #13291d;
+  --dk-color-status-danger: #ff9ba6;
+  --dk-color-status-danger-bg: #3a1519;
+  --dk-color-status-warning: #f2c46d;
+  --dk-color-status-warning-bg: #33270d;
+  --dk-color-status-info: #d9d5de;
+  --dk-color-status-info-bg: #222026;
+  --dk-card-border: #222026;
+  /* The one accent: a quiet plum glow on the featured card */
+  --dk-card-bg-feature: radial-gradient(120% 140% at 100% 0%, #4a2552 0%, #231a29 45%, #18161b 75%);
+}

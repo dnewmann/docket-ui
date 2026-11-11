@@ -41,8 +41,13 @@ describe('Tabs', () => {
     expect(screen.getByRole('tab', { name: 'Holdings' })).toHaveAttribute('tabindex', '-1');
   });
 
-  it('has no axe violations', async () => {
-    const { container } = render(<Tabs label="Portfolio views" items={items} />);
+  it('has no axe violations in both variants', async () => {
+    const { container } = render(
+      <>
+        <Tabs label="Portfolio views" items={items} />
+        <Tabs label="Filters" items={items} variant="pill" />
+      </>,
+    );
     expect(await axe(container)).toHaveNoViolations();
   });
 });
