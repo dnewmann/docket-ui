@@ -70,12 +70,12 @@ npm run storybook   # http://localhost:6006
 Using the library:
 
 ```bash
-npm install @dnewmann/docket-ui
+npm install docket-ui
 ```
 
 ```tsx
-import { Button } from '@dnewmann/docket-ui';
-import '@dnewmann/docket-ui/styles.css';
+import { Button } from 'docket-ui';
+import 'docket-ui/styles.css';
 
 <div data-theme="dark">
   <Button variant="primary">Save matter</Button>

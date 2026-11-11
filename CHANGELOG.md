@@ -1,6 +1,11 @@
 # Changelog
 
-All notable changes to `@dnewmann/docket-ui`. Versions follow semver.
+All notable changes to `docket-ui`. Versions follow semver.
+
+## Unreleased
+
+- Published as `docket-ui` on npm (the `@dnewmann` scope belongs to a different npm account).
+- Introduction page title renders at full size.
 
 ## 0.2.0
 
