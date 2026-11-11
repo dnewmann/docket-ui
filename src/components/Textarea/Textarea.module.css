@@ -1,0 +1,14 @@
+.textarea {
+  height: auto;
+  min-height: calc(var(--dk-field-height) * 2);
+  padding-top: var(--dk-space-2);
+  padding-bottom: var(--dk-space-2);
+  line-height: var(--dk-font-lineHeight-normal);
+  resize: vertical;
+}
+.count {
+  justify-self: end;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-xs);
+  font-variant-numeric: tabular-nums;
+}

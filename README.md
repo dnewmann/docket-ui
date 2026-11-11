@@ -90,6 +90,7 @@ import '@dnewmann/docket-ui/styles.css';
 | TextField, Select, Checkbox, Switch | Done |
 | Modal, Combobox (async), Table (sortable, responsive) | Done |
 | Tabs, Tooltip, NumberField, Stat, Badge, Skeleton | Done (0.2.0) |
+| Card, Alert, SegmentedControl, RadioGroup, Textarea, Spinner, EmptyState, Pagination, Menu, Progress, Accordion | Done (0.2.0) |
 | Radio, Textarea, Toast, Tooltip | Next |
 | DatePicker | Planned |
 | EmptyState, Skeleton | Planned |

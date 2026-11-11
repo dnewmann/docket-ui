@@ -1,0 +1,52 @@
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--dk-space-3);
+  padding: var(--dk-space-3) var(--dk-space-4);
+  border: 1px solid currentColor;
+  border-radius: var(--dk-radius-md);
+  font-family: var(--dk-font-family-sans);
+  font-size: var(--dk-font-size-sm);
+}
+.info { background: var(--dk-color-status-info-bg); color: var(--dk-color-status-info); }
+.success { background: var(--dk-color-status-success-bg); color: var(--dk-color-status-success); }
+.warning { background: var(--dk-color-status-warning-bg); color: var(--dk-color-status-warning); }
+.danger { background: var(--dk-color-status-danger-bg); color: var(--dk-color-status-danger); }
+.icon,
+.dismiss svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.body {
+  flex: 1;
+  min-width: 0;
+}
+.title {
+  margin: 0 0 2px;
+  font-weight: var(--dk-font-weight-semibold);
+}
+.text {
+  color: var(--dk-color-text-primary);
+}
+.dismiss {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  margin: -4px -8px -4px 0;
+  border: 0;
+  border-radius: var(--dk-radius-sm);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.dismiss:focus-visible {
+  outline: 2px solid var(--dk-color-focus-ring);
+  outline-offset: 2px;
+}

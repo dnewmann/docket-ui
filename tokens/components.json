@@ -148,5 +148,33 @@
   "skeleton": {
     "bg": "{color.bg.subtle}",
     "radius": "{radius.sm}"
+  },
+  "card": {
+    "bg": "{color.bg.surface}",
+    "border": "{color.border.subtle}",
+    "radius": "{radius.lg}",
+    "padding": "{space.5}",
+    "shadow": "{shadow.sm}"
+  },
+  "segmented": {
+    "bg": "{color.bg.subtle}",
+    "bg-selected": "{color.bg.surface}",
+    "text": "{color.text.secondary}",
+    "text-selected": "{color.text.primary}",
+    "radius": "{radius.md}",
+    "height": "36px"
+  },
+  "progress": {
+    "track": "{color.bg.subtle}",
+    "fill": "{color.action.primary}",
+    "height": "8px",
+    "radius": "{radius.full}"
+  },
+  "menu": {
+    "bg": "{color.bg.surface}",
+    "border": "{color.border.subtle}",
+    "radius": "{radius.md}",
+    "item-hover": "{color.bg.hover}",
+    "shadow": "{shadow.lg}"
   }
 }
