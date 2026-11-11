@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Badge, Button, Card, Progress, SegmentedControl, Stat, Tabs } from '../index';
-import './themes/hindcast.css';
 
 /** One small screen, rendered under different themes. Only tokens change between them. */
 function Dashboard() {
@@ -8,45 +7,45 @@ function Dashboard() {
     <div style={{ display: 'grid', gap: 28 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
         <h2 style={{ margin: 0, fontSize: 36, fontWeight: 300, letterSpacing: '-0.02em', color: 'var(--dk-color-text-primary)' }}>
-          My <strong style={{ fontWeight: 700 }}>Portfolio</strong>
+          My <strong style={{ fontWeight: 700 }}>Matters</strong>
         </h2>
-        <Button>+ Add holding</Button>
+        <Button>+ New matter</Button>
       </div>
 
       <Tabs
         variant="pill"
         label="Views"
         items={[
-          { id: 'overview', label: 'Overview', content: null },
-          { id: 'what-if', label: 'What if', content: null },
-          { id: 'projections', label: 'Projections', content: null },
+          { id: 'open', label: 'Open', content: null },
+          { id: 'due', label: 'Due this week', content: null },
+          { id: 'closed', label: 'Closed', content: null },
         ]}
       />
 
       <Card variant="feature">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16, flexWrap: 'wrap' }}>
-          <Stat label="Total value" value="$48,210" delta={0.124} deltaLabel="this year" />
-          <Badge tone="success">On track</Badge>
+          <Stat label="Billed this quarter" value="$1,284,500" delta={0.064} deltaLabel="vs last quarter" />
+          <Badge tone="success">On target</Badge>
         </div>
         <div style={{ marginTop: 32 }}>
           <SegmentedControl
-            label="Time range"
+            label="Period"
             hideLabel
-            defaultValue="1Y"
-            options={['1M', '6M', 'YTD', '1Y', '5Y'].map((v) => ({ value: v, label: v }))}
+            defaultValue="Quarter"
+            options={['Month', 'Quarter', 'Year'].map((v) => ({ value: v, label: v }))}
           />
         </div>
       </Card>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
         <Card>
-          <Stat label="If you bought VOO in 2015" value="$27,940" delta={1.794} deltaLabel="on $10,000" />
+          <Stat label="Write-offs" value="$42,100" delta={-0.12} invertDelta deltaLabel="vs last quarter" />
         </Card>
         <Card>
-          <Progress label="Goal: $100,000" value={48210} max={100000} valueLabel="48%" />
+          <Progress label="Matter budget" value={64000} max={100000} valueLabel="$64,000 of $100,000" />
           <div style={{ marginTop: 24 }}>
             <Button variant="secondary" size="sm">
-              Adjust goal
+              Adjust budget
             </Button>
           </div>
         </Card>
@@ -55,11 +54,10 @@ function Dashboard() {
   );
 }
 
-function Panel({ title, theme, className }: { title: string; theme: 'light' | 'dark'; className?: string }) {
+function Panel({ title, theme }: { title: string; theme: 'light' | 'dark' }) {
   return (
     <section
       data-theme={theme}
-      className={className}
       style={{ padding: 32, borderRadius: 32, background: 'var(--dk-color-bg-canvas)', minWidth: 0 }}
     >
       <p
@@ -86,7 +84,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'The same screen under four themes. Hindcast overrides only semantic and component tokens (colors, radius, spacing, heights) in one CSS file: no component code changes. Every text and control color pair in both Hindcast themes passes WCAG AA.',
+          'The same screen in light and dark. Only semantic tokens differ between the two; components and patterns never hard-code a color. To re-brand, override semantic tokens (and, for shape and space, component tokens) in one CSS file: see the README.',
       },
     },
   },
@@ -97,14 +95,9 @@ type Story = StoryObj<typeof meta>;
 
 export const SideBySide: Story = {
   render: () => (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: 24, padding: 24, background: '#0F0F11' }}>
-      <Panel title="Docket light" theme="light" />
-      <Panel title="Docket dark" theme="dark" />
-      <Panel title="Hindcast light" theme="light" className="hc-light" />
-      <Panel title="Hindcast dark" theme="dark" className="hc-dark" />
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', gap: 24, padding: 24, background: 'var(--dk-color-bg-canvas)' }}>
+      <Panel title="Light" theme="light" />
+      <Panel title="Dark" theme="dark" />
     </div>
   ),
 };
-
-export const HindcastLight: Story = { render: () => <Panel title="Hindcast light" theme="light" className="hc-light" /> };
-export const HindcastDark: Story = { render: () => <Panel title="Hindcast dark" theme="dark" className="hc-dark" /> };
