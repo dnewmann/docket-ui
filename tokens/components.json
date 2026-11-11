@@ -1,22 +1,22 @@
 {
   "$description": "Layer 3: per-component tokens. Values reference semantic tokens ({color.action.primary}) or primitives for non-color scales ({space.4}). Theme-independent: they resolve through the semantic layer.",
   "button": {
-    "radius": "{radius.md}",
+    "radius": "{radius.full}",
     "font-weight": "{font.weight.semibold}",
     "gap": "{space.2}",
     "sm": {
-      "height": "32px",
-      "padding-x": "{space.3}",
-      "font-size": "{font.size.sm}"
-    },
-    "md": {
-      "height": "40px",
+      "height": "36px",
       "padding-x": "{space.4}",
       "font-size": "{font.size.sm}"
     },
-    "lg": {
-      "height": "48px",
+    "md": {
+      "height": "44px",
       "padding-x": "{space.5}",
+      "font-size": "{font.size.sm}"
+    },
+    "lg": {
+      "height": "52px",
+      "padding-x": "{space.6}",
       "font-size": "{font.size.md}"
     },
     "primary": {
@@ -42,9 +42,9 @@
     }
   },
   "field": {
-    "height": "40px",
-    "radius": "{radius.md}",
-    "padding-x": "{space.3}",
+    "height": "48px",
+    "radius": "{radius.lg}",
+    "padding-x": "{space.4}",
     "font-size": "{font.size.sm}",
     "gap": "{space.1}",
     "bg": "{color.bg.surface}",
@@ -81,7 +81,7 @@
   "modal": {
     "bg": "{color.bg.surface}",
     "overlay": "{color.bg.overlay}",
-    "radius": "{radius.lg}",
+    "radius": "{radius.2xl}",
     "shadow": "{shadow.lg}",
     "padding": "{space.6}",
     "width-sm": "400px",
@@ -92,7 +92,7 @@
   "listbox": {
     "bg": "{color.bg.surface}",
     "border": "{color.border.subtle}",
-    "radius": "{radius.md}",
+    "radius": "{radius.lg}",
     "shadow": "{shadow.md}",
     "option-hover": "{color.bg.hover}",
     "option-selected": "{color.bg.selected}",
@@ -107,5 +107,78 @@
     "cell-padding-y": "{space.3}",
     "cell-padding-x": "{space.4}",
     "font-size": "{font.size.sm}"
+  },
+  "tabs": {
+    "gap": "{space.1}",
+    "padding-x": "{space.4}",
+    "height": "44px",
+    "font-size": "{font.size.sm}",
+    "font-weight": "{font.weight.semibold}",
+    "text": "{color.text.secondary}",
+    "text-selected": "{color.text.primary}",
+    "indicator": "{color.action.primary}",
+    "border": "{color.border.subtle}",
+    "bg-hover": "{color.bg.hover}",
+    "pill-bg": "{color.bg.subtle}",
+    "pill-bg-selected": "{color.action.primary}",
+    "pill-text-selected": "{color.action.on-primary}"
+  },
+  "tooltip": {
+    "bg": "{color.bg.inverse}",
+    "text": "{color.text.inverse}",
+    "radius": "{radius.md}",
+    "padding-x": "{space.2}",
+    "padding-y": "{space.1}",
+    "font-size": "{font.size.xs}",
+    "max-width": "240px"
+  },
+  "stat": {
+    "label": "{color.text.secondary}",
+    "label-size": "{font.size.sm}",
+    "value": "{color.text.primary}",
+    "value-size": "{font.size.2xl}",
+    "value-weight": "{font.weight.bold}",
+    "up": "{color.status.success}",
+    "down": "{color.status.danger}",
+    "flat": "{color.text.secondary}"
+  },
+  "badge": {
+    "radius": "{radius.full}",
+    "padding-x": "{space.2}",
+    "font-size": "{font.size.xs}",
+    "font-weight": "{font.weight.semibold}"
+  },
+  "skeleton": {
+    "bg": "{color.bg.subtle}",
+    "radius": "{radius.md}"
+  },
+  "card": {
+    "bg": "{color.bg.surface}",
+    "border": "{color.border.subtle}",
+    "radius": "{radius.2xl}",
+    "padding": "{space.8}",
+    "shadow": "none",
+    "bg-feature": "{gradient.feature}"
+  },
+  "segmented": {
+    "bg": "{color.bg.subtle}",
+    "bg-selected": "{color.bg.surface}",
+    "text": "{color.text.secondary}",
+    "text-selected": "{color.text.primary}",
+    "radius": "{radius.full}",
+    "height": "44px"
+  },
+  "progress": {
+    "track": "{color.bg.subtle}",
+    "fill": "{color.action.primary}",
+    "height": "8px",
+    "radius": "{radius.full}"
+  },
+  "menu": {
+    "bg": "{color.bg.surface}",
+    "border": "{color.border.subtle}",
+    "radius": "{radius.xl}",
+    "item-hover": "{color.bg.hover}",
+    "shadow": "{shadow.lg}"
   }
 }

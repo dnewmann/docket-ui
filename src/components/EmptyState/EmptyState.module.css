@@ -1,0 +1,41 @@
+.root {
+  display: grid;
+  justify-items: center;
+  gap: var(--dk-space-2);
+  padding: var(--dk-space-8) var(--dk-space-5);
+  border: 1px dashed var(--dk-color-border-default);
+  border-radius: var(--dk-radius-lg);
+  font-family: var(--dk-font-family-sans);
+  text-align: center;
+}
+.icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--dk-radius-md);
+  background: var(--dk-color-bg-subtle);
+  color: var(--dk-color-text-secondary);
+}
+.icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.title {
+  margin: var(--dk-space-2) 0 0;
+  color: var(--dk-color-text-primary);
+  font-size: var(--dk-font-size-lg);
+  font-weight: var(--dk-font-weight-semibold);
+}
+.description {
+  max-width: 420px;
+  margin: 0;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-sm);
+}
+.action {
+  margin-top: var(--dk-space-3);
+}

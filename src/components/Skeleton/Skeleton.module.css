@@ -1,0 +1,27 @@
+.block {
+  display: block;
+  border-radius: var(--dk-skeleton-radius);
+  background: var(--dk-skeleton-bg);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.stack {
+  display: grid;
+  gap: var(--dk-space-2);
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block {
+    animation: none;
+  }
+}

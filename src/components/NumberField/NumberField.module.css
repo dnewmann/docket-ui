@@ -1,0 +1,35 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Numbers line up in columns and don't shift width while typing. */
+.input {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.withPrefix {
+  padding-left: calc(var(--dk-field-padding-x) + 1.25em);
+}
+
+.withSuffix {
+  padding-right: calc(var(--dk-field-padding-x) + 1.25em);
+}
+
+.prefix,
+.suffix {
+  position: absolute;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-field-font-size);
+  pointer-events: none;
+}
+
+.prefix {
+  left: var(--dk-field-padding-x);
+}
+
+.suffix {
+  right: var(--dk-field-padding-x);
+}

@@ -1,0 +1,40 @@
+.card {
+  padding: var(--dk-card-padding);
+  border: 1px solid var(--dk-card-border);
+  border-radius: var(--dk-card-radius);
+  background: var(--dk-card-bg);
+  box-shadow: var(--dk-card-shadow);
+  color: var(--dk-color-text-primary);
+  font-family: var(--dk-font-family-sans);
+}
+.feature {
+  background: var(--dk-card-bg-feature);
+  border-color: transparent;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--dk-space-3);
+  margin-bottom: var(--dk-space-4);
+}
+.title {
+  margin: 0;
+  font-size: var(--dk-font-size-lg);
+  font-weight: var(--dk-font-weight-semibold);
+}
+.description {
+  margin: var(--dk-space-1) 0 0;
+  color: var(--dk-color-text-secondary);
+  font-size: var(--dk-font-size-sm);
+}
+.actions {
+  display: flex;
+  gap: var(--dk-space-2);
+}
+.footer {
+  margin-top: var(--dk-space-4);
+  padding-top: var(--dk-space-4);
+  border-top: 1px solid var(--dk-card-border);
+}

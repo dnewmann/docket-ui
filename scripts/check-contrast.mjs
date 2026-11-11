@@ -48,6 +48,10 @@ const pairs = [
   ['color.text.secondary', 'color.bg.subtle', 4.5],
   // Error and hint text sit directly on surfaces
   ['color.status.danger', 'color.bg.surface', 4.5],
+  // Stat deltas, Tabs indicator, Tooltip
+  ['color.status.success', 'color.bg.surface', 4.5],
+  ['color.action.primary', 'color.bg.surface', 3],
+  ['color.text.inverse', 'color.bg.inverse', 4.5],
   ['color.text.secondary', 'color.bg.canvas', 4.5],
   ['color.status.success', 'color.status.success-bg', 4.5],
   ['color.status.warning', 'color.status.warning-bg', 4.5],

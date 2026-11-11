@@ -42,6 +42,24 @@ src/components/*         use component and semantic tokens only, never raw value
 
 Run everything locally with `npm run ci`.
 
+## Theming
+
+Components read component tokens, which read semantic tokens. Override the semantic layer once and every component follows:
+
+```css
+:root {
+  --dk-color-action-primary: #0f766e;
+  --dk-color-action-primary-hover: #115e59;
+}
+```
+
+Run the contrast check on any new colors.
+
+## Releasing
+
+1. Bump `version` in `package.json` and add a `CHANGELOG.md` entry.
+2. Create a GitHub release tagged `v<version>`. The publish workflow runs CI and publishes to npm with provenance.
+
 ## Getting started
 
 ```bash
@@ -50,6 +68,10 @@ npm run storybook   # http://localhost:6006
 ```
 
 Using the library:
+
+```bash
+npm install @dnewmann/docket-ui
+```
 
 ```tsx
 import { Button } from '@dnewmann/docket-ui';
@@ -67,6 +89,8 @@ import '@dnewmann/docket-ui/styles.css';
 | Button | Done |
 | TextField, Select, Checkbox, Switch | Done |
 | Modal, Combobox (async), Table (sortable, responsive) | Done |
+| Tabs, Tooltip, NumberField, Stat, Badge, Skeleton | Done (0.2.0) |
+| Card, Alert, SegmentedControl, RadioGroup, Textarea, Spinner, EmptyState, Pagination, Menu, Progress, Accordion | Done (0.2.0) |
 | Radio, Textarea, Toast, Tooltip | Next |
 | DatePicker | Planned |
 | EmptyState, Skeleton | Planned |

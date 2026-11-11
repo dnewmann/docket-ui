@@ -1,0 +1,6 @@
+.root { display: grid; gap: var(--dk-space-2); font-family: var(--dk-font-family-sans); }
+.header { display: flex; justify-content: space-between; gap: var(--dk-space-3); font-size: var(--dk-font-size-sm); }
+.label { color: var(--dk-color-text-primary); font-weight: var(--dk-font-weight-medium); }
+.value { color: var(--dk-color-text-secondary); font-variant-numeric: tabular-nums; }
+.track { height: var(--dk-progress-height); overflow: hidden; border-radius: var(--dk-progress-radius); background: var(--dk-progress-track); }
+.fill { height: 100%; border-radius: inherit; background: var(--dk-progress-fill); transition: width var(--dk-duration-normal) ease; }
